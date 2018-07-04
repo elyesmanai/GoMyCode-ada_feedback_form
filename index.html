@@ -26,13 +26,21 @@
       <div class="contact">
         <h3>Email Us</h3>
         <div class="alert" id="alert">Thank you for your feedback, dear friend!</div>
-        <form id="contactform" >
+        <form id="contactform">
           <p>
             <label>Name</label>
             <input type="text" name="name" id="name">
           </p>
           <p>
-            <label>Slide name</label>
+            <label>Track</label>
+            <select name="track" id="track">
+              <option value="ai">AI</option>
+              <option value="web">Web</option>
+              <option value="game">Game</option>
+            </select>
+          </p>
+          <p>
+            <label>Slide name (or object)</label>
             <input type="text" name="slide" required="true" id="slide" >
           </p>
           <p class="full">

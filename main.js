@@ -17,8 +17,9 @@
       var name = getValue('name');
       var slide = getValue('slide');
       var message = getValue('message');
+      var track = getValue('track');
 
-      saveMessage(name,slide,message);
+      saveMessage(name,slide,message,track);
 
       document.getElementById('contactform').reset();
       document.getElementById('alert').style.display = "inline-block";
@@ -32,12 +33,13 @@ function getValue(id){
 // Reference messages collection
   var messagesRef = firebase.database().ref('messages');
 
-function saveMessage(contact_name,contact_slide,contact_message){
+function saveMessage(contact_name,contact_slide,contact_message,contact_track){
    var newMessageRef = messagesRef.push();
       newMessageRef.set({
         name   : contact_name,
         slide  : contact_slide,
         message: contact_message,
+        track  : contact_track,
         state: 0
       });
 }
